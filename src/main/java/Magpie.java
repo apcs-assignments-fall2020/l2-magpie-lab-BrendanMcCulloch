@@ -31,6 +31,9 @@ public class Magpie
     public String getResponse(String statement)
     {
         String response = "";
+        if (statement == "dog"){
+            response = "tell me more"
+        }
         if (statement.indexOf("no") >= 0)
         {
             response = "Why so negative?";
@@ -90,7 +93,7 @@ public class Magpie
     // The method returns the index of the first character in word
     // if it is found, and returns -1 otherwise. 
     public int findWord(String str, String word) {
-        return -1;
+        int idx = str.indexOf()
     }
 
     

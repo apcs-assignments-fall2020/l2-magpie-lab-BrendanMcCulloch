@@ -153,9 +153,16 @@ public class Magpie
      */
     public String transformIWantStatement(String statement)
     {
-
-        return "";
+        statement = statement.trim();
+        String gooba = statement.substring(statement.length() - 1);
+        if (gooba.equals(".")){
+            statement = statement.substring(statement.length() - 1);
+        }
+        int kns = findWord(statement, "I want");
+        String lkjos = statement.substring(kns + 7);
+        return "would you really be happy if you had " + lkjos + "?";
     }
+
 
     /**
      * Take a statement with "I <something> you" and transform it into 
@@ -165,8 +172,18 @@ public class Magpie
      */
     public String transformIYouStatement(String statement)
     {
-        //your code here
-        return "";
+        statement = statement.trim();
+        String asl = statement.substring(statement.length() - 1);
+        if (asl.equals(".")){
+            statement = statement.substring(statement.length() - 1);
+    
+        }
+        int oue = findWord(statement, "I");
+        int weq = findWord(statement, "You");
+        String you = statement.substring(oue + 1, weq).trim();
+
+        return ("Why do you " + you + " me?");
+
     }
 
     /**
@@ -177,8 +194,15 @@ public class Magpie
      */
     public String transformIWantToStatement(String statement)
     {
-        // your code here
-        return "";
+        statement = statement.trim();
+        String asl = statement.substring(statement.length() - 1);
+        if (asl.equals(".")){
+            statement = statement.substring(statement.length() - 1);
+    
+        }
+        int bd = findWord(statement, "I want to");
+        String oir = statement.substring(bd + 9).trim();
+        return "What would it mean to " + jkl + "?";
     }
 
 
@@ -192,7 +216,15 @@ public class Magpie
      */
     public String transformYouMeStatement(String statement)
     {
-        // your code here
-        return "";
+        statement = statement.trim();
+        String asl = statement.substring(statement.length() - 1);
+        if (asl.equals(".")){
+            statement = statement.substring(statement.length() - 1);
+    
+        }
+        int oiuy = findWord(statement, "You");
+        int pouss = findWord(statement, "Me");
+        String llakdsf = statement.substring(oiuy + 3, pouss).trim();
+        return "What makes you think that I " + llakdsf + " you?";
     }
 }

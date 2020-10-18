@@ -43,7 +43,7 @@ public class Magpie
         }
         else if (statement.indexOf("mother") >= 0
                 || statement.indexOf("father") >= 0
-                || statement.indexOf("sister") >= 0
+                || statement.indexOf("sister") >= 0)
                 
         {
             response = "Tell me more about your family.";
@@ -128,7 +128,7 @@ public class Magpie
                 gooba = ' ';
             }
 
-            if (r.indexOf(w) + w.length() >= r.lengh()){
+            if (r.indexOf(w) + w.length() >= r.length()){
                 really = ' ';
             }
             else{
@@ -141,6 +141,7 @@ public class Magpie
                 return(r.indexOf(w));
             }
         }
+    }
 
     
     // We will work on the following methods later!
@@ -202,7 +203,7 @@ public class Magpie
         }
         int bd = findWord(statement, "I want to");
         String oir = statement.substring(bd + 9).trim();
-        return "What would it mean to " + jkl + "?";
+        return "What would it mean to " + oir + "?";
     }
 
 
